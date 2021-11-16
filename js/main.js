@@ -142,6 +142,19 @@
 
     };
 
+    /* Show hints on hover */
+    // $(".item-folio__thumb.media-container").hover(
+    //     // mouseenter
+    //     function(){
+    //         $(this).css("background-color", "#000000")
+    //         $('.hints-product_page').removeClass('hidden')
+    //     },
+    //     // mouseleave
+    //     function() {
+    //         $(this).css("background-color", "unset")
+    //         $('.hints-product_page').addClass('hidden')
+    //     }
+    // );
 
    /* photoswipe
     * ----------------------------------------------------- */
@@ -267,6 +280,23 @@
 
     };
 
+    /* Open Project Description Modal
+    */
+    var ssToggleDescModal = function() {
+      $('.dev-open-modal').on('click', function (e) {
+        $('body').addClass('disable-scroll');
+        $('#description_modal').toggleClass('hidden');
+        const source = $(this).data('source');
+        $(`.modal-desc_${source}`).removeClass('hidden');
+        $('.dev-close-modal').data('source', source);
+      });
+      $('.dev-close-modal').on('click', function(e){
+        $('body').removeClass('disable-scroll');
+        $('#description_modal').addClass('hidden');
+        const source = $(this).data('source');
+        $(`.modal-desc_${source}`).addClass('hidden');
+      });
+   };
 
    /* Initialize
     * ------------------------------------------------------ */
@@ -282,6 +312,7 @@
         ssSmoothScroll();
         ssAlertBoxes();
         ssAOS();
+        ssToggleDescModal();
 
     })();
 

@@ -1458,6 +1458,9 @@ input::-moz-focus-inner {
   max-width: 940px;
   text-align: center;
 }
+.white {
+  color: white !important;
+}
 
 .section-heading {
   font-family: "Roboto", sans-serif;
@@ -1503,14 +1506,6 @@ input::-moz-focus-inner {
   line-height: 1.259;
   letter-spacing: -0.05rem;
   color: #000000;
-}
- 
-#projects .section-desc {
-  color: white;
-}
-
-#contact .section-desc {
-  color: white;
 }
 
 .item-title {
@@ -3033,15 +3028,22 @@ input::-moz-focus-inner {
 
 }
 
+/* 
+ * # projects
+ */
 
+.s-projects {
+  padding-top: 10rem;
+  padding-bottom: 12rem;
+}
 
 /* ===================================================================
  * # testimonials
  *
  * ------------------------------------------------------------------- */
 .s-testimonials {
-  padding-top: 18.4rem;
-  padding-bottom: 16rem;
+  padding-top: 10rem;
+  padding-bottom: 12rem;
   background-color: #efefef;
 }
 
@@ -3629,4 +3631,65 @@ html[data-useragent*='rv:11.0'] .ss-go-top::after {
 .intro-text-name {
   font-size: 44px !important;
   color: white;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.description-modal-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 4rem;
+  margin: auto;
+  background: #000000c7;
+  z-index: 101;
+}
+
+.description-modal {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  overflow: hidden;
+}
+.description-modal .row {
+  overflow-y: scroll;
+    height: 100%;
+    /* padding-bottom: 25
+px
+; */
+}
+.media-container {
+  margin-bottom: 60px;
+}
+.media-container video {
+  border: 4px solid grey;
+  border-radius: 20px;
+}
+.cross-button {
+  display: flex;
+  flex-direction: column;
+}
+.cross-button i {
+  align-self: flex-end;
+  padding: 1rem;
+}
+.disable-scroll {
+  height: 100vh;
+  overflow: hidden;
+}
+.item-folio__modal {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  color: #000000;
+  color: #cf1767;
+  cursor: pointer;
+}
+
+.hints-product_page {
+  position: relative;
+  top: -360px;
 }

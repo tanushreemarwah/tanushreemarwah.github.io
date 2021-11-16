@@ -35,6 +35,7 @@
 
 <body id="top">
 
+<div>
     <div id="preloader">
         <div id="loader"></div>
     </div>
@@ -43,19 +44,20 @@
     ================================================== -->
     <header class="s-header">
 
+        <!--
         <div class="header-logo">
             <a class="site-logo" href="index.html">
                 <img src="images/logo.svg" alt="Homepage">
             </a>
         </div>
-
+        -->
         <nav class="header-nav-wrap">
             <ul class="header-main-nav">
                 <li class="current"><a class="smoothscroll" href="#intro" title="intro">Intro</a></li>
                 <li><a class="smoothscroll" href="#about" title="about">About</a></li>
                 <li><a class="smoothscroll" href="#experience" title="experience">Experience</a></li>
                 <li><a class="smoothscroll" href="#skills" title="skills">Skills</a></li>
-                <!-- <li><a class="smoothscroll" href="#projects" title="projects">Projects</a></li> -->
+                <li><a class="smoothscroll" href="#projects" title="projects">Projects</a></li>
                 <li><a class="smoothscroll" href="#testimonials" title="testimonials">Testimonials</a></li>
                 <li><a class="smoothscroll" href="#contact" title="contactus">Contact</a></li>	
             </ul>
@@ -81,6 +83,9 @@
             <div class="column large-9 mob-full intro-text">
                 <h1 class="intro-text-name">Hello, I'm Tanushree!</h1>
                 <h3>And I'm a Full Stack Web Developer.</h3>
+                <!--
+                    Have the constant desire to grow, learn, and explore new things
+                 -->
             </div>
 
             <div class="intro-scroll">
@@ -280,12 +285,12 @@
             </div>
         </div>
 
-        <div class="row skills-content">
+        <div class="row skills-content" data-aos="fade-up">
 
             <div class="column large-6 tab-full">
                 <p>
                     I mainly worked on backend and frontend projects using Ruby on Rails, HTML/CSS and JavaScript.
-                    I also have hand-on experience in using Ajax, jQuery and have used varioud softwares like 
+                    I also have hands-on experience in using Ajax, jQuery and have used varioud softwares like 
                     version control tools like Git.
                     <br>
                     I am also familiar with the ELK stack as I implemented search using ElasticSearch.
@@ -312,18 +317,18 @@
                         <strong>JavaScript/ jQuery</strong>
                     </li>
                     <li>
-                        <div class="progress percen80"><span>80%</span></div>
+                        <div class="progress percent85"><span>85%</span></div>
                         <strong>SQL with Postgres</strong>
+                    </li>
+                    <li>
+                        <div class="progress percent80"><span>80%</span></div>
+                        <strong>Python</strong>
                     </li>
                     <!-- #TODO: Add Soft skills ? -->
                     <!--
                     <li>
                         <div class="progress percent50"><span>50%</span></div>
                         <strong>React JS</strong>
-                    </li>
-                    <li>
-                        <div class="progress percent50"><span>50%</span></div>
-                        <strong>Python</strong>
                     </li>
                     -->
                 </ul>
@@ -336,98 +341,173 @@
 
     <!-- projects
     ================================================== -->
-    <!--<section id="projects" class="s-projects target-section">
+    <section id="projects" class="s-projects target-section">
 
         <div class="row heading-block heading-block--center" data-aos="fade-up">
             <div class="column large-full">
-                <h2 class="section-heading section-heading--centerbottom">Projects</h2>
-                <p class="section-desc">
+                <h2 class="section-heading section-heading--centerbottom white">Projects</h2>
+                <p class="section-desc white">
                     Here are some of the projects that I have worked on. Feel free to 
                     check them out.
                 </p>
             </div>
-        </div> --><!-- end heading-block -->
+        </div> <!-- end heading-block -->
 
-        <!-- <div class="masonry-wrap">
+        <div class="masonry-wrap">
 
             <div class="masonry">
                 <div class="grid-sizer"></div>
     
+                <!-- Product Page (product) -->
+                <div class="masonry__brick" data-aos="fade-up">
+                    <div class="item-folio">
+                        <div class="item-folio__thumb media-container">
+                            <!--<video width="360" height="600" controls autoplay loop>
+                                <source src="images/product_page_demo.mp4" type="video/mp4">
+                                Your browser does not support this video! Try again with Google Chrome or Firefox.
+                            </video>-->
+                            <a href="images/product_page_thumb.png" class="thumb-link" title="Product Page" data-size="1050x700">
+                                <img src="images/product_page_thumb.png"
+                                     srcset="images/product_page_thumb.png 1x, images/product_page_thumb.png 2x" alt="">
+                            </a>
+                            <div class="hints-product_page hidden">Click to View Demo</div>
+                            <a href="https://www.foxy.in/products/it-s-skin-hyaluronic-acid-moisture-serum" class="item-folio__project-link" title="Product Page Sample" target="_blank"></a>
+                        </div>
+    
+                        <div class="item-folio__text">
+                            <h4 class="item-folio__title">
+                                Foxy Product Page
+                            </h4>
+                            <p class="item-folio__cat">
+                                Frontend/Backend
+                            </p>
+                        </div>
+                        <div class="item-folio__desc">
+                            <p class="item-folio__modal dev-open-modal" data-source='product'>Click to view Details</p>
+                        </div>
+                        <div class="item-folio__caption">
+                            <p>
+                                Created the product page for EkAnek's e-commerce website. <br>
+                            </p>
+                        </div>
+                    </div>
+                </div> <!-- end masonry__brick -->
+
+                <!-- Orders Management System (oms) -->
                 <div class="masonry__brick" data-aos="fade-up">
                     <div class="item-folio">
                         <div class="item-folio__thumb">
-                            <a href="images/portfolio/gallery/g-city-building.jpg" class="thumb-link" title="Shutterbug" data-size="1050x700">
-                                <img src="images/portfolio/city-building.jpg" 
-                                     srcset="images/portfolio/city-building.jpg 1x, images/portfolio/city-building@2x.jpg 2x" alt="">
-                            </a>    
-                            <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link" target="_blank"></a>
+                            <a href="images/orders_be.png" class="thumb-link" title="Orders Management System" data-size="1050x700">
+                                <img src="images/orders_be.png"
+                                     srcset="images/orders_be.png 1x, images/orders_be.png 2x" alt="">
+                            </a>
+                            <a href="" class="item-folio__project-link" title="Orders Management System" target="_blank"></a>
                         </div>
-    
                         <div class="item-folio__text">
                             <h4 class="item-folio__title">
-                                City Building
+                                Orders Management System
                             </h4>
                             <p class="item-folio__cat">
-                                Branding
+                                Backend
                             </p>
+                            <div class="item-folio__desc">
+                                <p class="item-folio__modal dev-open-modal" data-source='oms'>Click to view Details</p>
+                            </div>
                         </div>
                         <div class="item-folio__caption">
-                            <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
+                            <p>Developed the backend system for creating and managing orders received from Foxy's app and website.</p>
                         </div>
                     </div>
-                </div> --><!-- end masonry__brick -->
-    
-            <!--   <div class="masonry__brick" data-aos="fade-up">
+                </div> <!-- end masonry__brick -->
+
+                <!-- Recycle with Foxy (recycle) -->
+                <div class="masonry__brick" data-aos="fade-up">
                     <div class="item-folio">
                         <div class="item-folio__thumb">
-                            <a href="images/portfolio/gallery/g-woodcraft.jpg" class="thumb-link" title="Woodcraft" data-size="1050x700">
-                                <img src="images/portfolio/woodcraft.jpg" 
-                                     srcset="images/portfolio/woodcraft.jpg 1x, images/portfolio/woodcraft@2x.jpg 2x" alt="">
+                            <a href="images/recycle_with_foxy_thumb.png" class="thumb-link" title="Recycle With Foxy" data-size="1050x700">
+                                <img src="images/recycle_with_foxy_thumb.png"
+                                     srcset="images/recycle_with_foxy_thumb.png 1x, images/recycle_with_foxy_thumb.png 2x" alt="">
                             </a>
-                            <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link" target="_blank"></a>
+                            <a href="https://www.foxy.in/recycle_with_foxy" class="item-folio__project-link" title="Recycle With Foxy" target="_blank"></a>
+                        </div>
+
+                        <div class="item-folio__text">
+                            <h4 class="item-folio__title">
+                                Recycle With Foxy
+                            </h4>
+                            <p class="item-folio__cat">
+                                Frontend/Backend
+                            </p>
+                            <div class="item-folio__desc">
+                                <p class="item-folio__modal dev-open-modal" data-source='recycle'>Click to view Details</p>
+                            </div>
+                        </div>
+                        <div class="item-folio__caption">
+                            <p>Developed the application for EkAnek's recycle program. <br>
+                                <span><a href="https://jmp.sh/CofYtx7">View Demo</a></span>
+                            </p>
+                        </div>
+                    </div>
+                </div> <!-- end masonry__brick -->
+
+                <!-- Inventory and Warehouse Management (iwms) -->
+                <div class="masonry__brick" data-aos="fade-up">
+                    <div class="item-folio">
+                        <div class="item-folio__thumb">
+                            <a href="images/inventory_mvmt_be.png" class="thumb-link" title="Inventory and Warehouse Management System" data-size="1050x700">
+                                <img src="images/inventory_mvmt_be.png"
+                                     srcset="images/inventory_mvmt_be.png 1x, images/inventory_mvmt_be.png 2x" alt="">
+                            </a>
+                            <a href="https://www.behance.net/" class="item-folio__project-link" title="Inv and Warehouse Management System" target="_blank"></a>
                         </div>
                         <div class="item-folio__text">
                             <h4 class="item-folio__title">
-                                Woodcraft
+                                Inventory and Warehouse Management System
                             </h4>
                             <p class="item-folio__cat">
-                                Web Design
+                                Backend
                             </p>
+                            <div class="item-folio__desc">
+                                <p class="item-folio__modal dev-open-modal" data-source='iwms'>Click to view Details</p>
+                            </div>
                         </div>
                         <div class="item-folio__caption">
-                            <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
+                            <p>Developed the backend system for tracking inventory movement between multiple warehouses.</p>
                         </div>
                     </div>
-                </div>--> <!-- end masonry__brick -->
+                </div> <!-- end masonry__brick -->
 
-<!--            </div>  end masonry -->
+                <!-- Automated Purchase Order System (apos) -->
+                <div class="masonry__brick" data-aos="fade-up">
+                    <div class="item-folio">
+                        <div class="item-folio__thumb">
+                            <a href="images/po_be.png" class="thumb-link" title="Automated Purchase Order System" data-size="1050x700">
+                                <img src="images/po_be.png"
+                                     srcset="images/po_be.png 1x, images/po_be.png 2x" alt="">
+                            </a>
+                            <a href="https://www.behance.net/" class="item-folio__project-link" title="Purchase Orders System" target="_blank"></a>
+                        </div>
+                        <div class="item-folio__text">
+                            <h4 class="item-folio__title">
+                                Automated Purchase Order System
+                            </h4>
+                            <p class="item-folio__cat">
+                                Backend
+                            </p>
+                            <div class="item-folio__desc">
+                                <p class="item-folio__modal dev-open-modal" data-source='apos'>Click to view Details</p>
+                            </div>
+                        </div>
+                        <div class="item-folio__caption">
+                            <p>Developed the backend system for automatic creation of Purchase Orders.</p>
+                        </div>
+                    </div>
+                </div> <!-- end masonry__brick -->
+            </div>  <!-- end masonry -->
 
-    <!--    </div> end masonry-wrap -->
+        </div> <!-- end masonry-wrap -->
+    </section> <!-- end s-work -->
 
-    <!--
-        <div class="row half-bottom">
-
-            <div class="column large-6 tab-full">
-
-                <h3>Responsive video</h3>
-
-                <div class="video-container">
-                <video width="1080" height="1920" controls>
-                    <source src="images/product_page_demo.mp4" type="video/mp4">
-                    Your browser does not support this video! Try again with Google Chrome or Firefox.
-                </video>
-
-            </div>
-
-        </div> --> <!-- end row -->
-    <!-- </section> end s-work -->
-
-    <!-- 
-        Add the following in testimonies - 
-        1. Letter of recommendation from Both Professors in B.Tech
-        2. Letter of Recommendation from Chandranshu
-        3. Get updated Letter of Recommendation and Work Experience Letter from Chandranshu
-    -->
     <!-- testimonies
     ================================================== -->
 
@@ -519,7 +599,6 @@
 
     </section> <!-- end s-testimonials -->
 
-
     <!-- contact
     ================================================== -->
     <section id="contact" class="s-contact ss-dark target-section">
@@ -538,7 +617,7 @@
                 </p>
                 -->
 
-                <p class="section-desc">
+                <p class="section-desc white">
                     I'm happy to connect, listen, help and learn. Let's work together and build
                     something awesome! <a href="mailto:tanushreemarwah1@gmail.com">Let's Talk!</a>
                 </p>
@@ -562,13 +641,13 @@
                     <li><a href="https://github.com/tanushreemarwah" target='_blank'><i class="fab fa-github" aria-hidden="true"></i></a></li>
                     <li><a href="https://www.instagram.com/tanushreemarwah/" target='_blank'><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
                     <li><a href="https://www.facebook.com/profile.php?id=100010941281012" target='_blank'><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+                    <i class="fa fa-window-close" aria-hidden="true"></i>
                 </ul>
             </div>
 
         </div> <!-- end contact-infos -->
 
     </section> <!-- end s-contact -->
-
 
     <!-- footer
     ================================================== -->
@@ -586,6 +665,8 @@
         </div>
     </footer>
     -->
+
+</div>
 
     <!-- photoswipe background
     ================================================== -->
@@ -626,6 +707,132 @@
 
     </div><!-- end photoSwipe background -->
 
+
+    <div id="description_modal" class="description-modal-container hidden">
+        <div class="description-modal">
+            <div class="dev-close-modal cross-button">
+                <i class="fa fa-window-close"></i>
+            </div>
+            <!-- product -->
+            <div class="row half-bottom modal-desc_product hidden">
+                <div class="column large-6 tab-full">
+                    <h1>Product Page</h1>
+                    <p>Created the frontend and backend for the product page of EkAnek's e-commerce website.</p>
+                    <h3>Features:</h3>
+                    <ol>
+                        <li>Image Zoom with complete support on both mobile and desktop.</li>
+                        <li>Interactive offer prompts.</li>
+                        <li>Collapsible product description with CSS and jQuery animations.</li>
+                        <li>Ratings and Reviews section to like and add reviews.</li>
+                        <li>Vertical video player with horizontal playlist - supported across all devices.</li>
+                        <li>Product Recommendations list to indicate which ingredients would match the skin type of the user.</li>
+                    </ol>
+                    <h3>Tech Stack: </h3><p>Ruby on Rails, HTML5/CSS3, JavaScript, PhotoSwipe (JS Library), React, REST APIs</p>
+                </div>
+                <div class="column large-6 tab-full">
+                    <h3>Video Demo</h3>
+                    <div class="media-container">
+                        <video width="360" height="600" controls autoplay loop>
+                            <source src="images/product_page_demo.mp4" type="video/mp4">
+                            Your browser does not support this video! Try again with Google Chrome or Firefox.
+                        </video>
+                    </div>
+                </div>
+            </div>
+            <!-- oms -->
+            <div class="row half-bottom modal-desc_oms hidden">
+                <div class="column large-6 tab-full">
+                    <h1>Orders Management System</h1>
+                    <p>Created an internally used, highly scalable backend system to create and manage orders.</p>
+                    <h3>Features:</h3>
+                    <ol>
+                        <li>Support for automatic and manual creation of Orders.</li>
+                        <li>Capture orders placed in real time from both Foxy mobile app as well as website using Rails Active Jobs.</li>
+                        <li>Integrate third party APIs for real time Order tracking.</li>
+                        <li>Design a messaging system for sending live shipment updates to customers and save them in backend as well.</li>
+                        <li>Created the API to cancel an order only within 30 minutes of placing it.</li>
+                        <li>Automatically generate a Cancelled Orders Report using a single, highly optimised SQL query.</li>
+                    </ol>
+                    <h3>Tech Stack: </h3><p>Ruby on Rails, Active Jobs, REST and JSON APIs, SQL with Postgres</p>
+                </div>
+                <div class="column large-6 tab-full">
+                    <h3>Dashboard Image</h3>
+                    <div class="media-container">
+                        <img src="images/order_details_1.png"
+                            srcset="images/order_details_1.png 1x, images/order_details_1.png 2x" alt="">
+                    </div>
+                </div>
+            </div>
+            <!-- recycle -->
+            <div class="row half-bottom modal-desc_recycle hidden">
+                <div class="column large-6 tab-full">
+                    <h1>Recycle Program - #RecycleWithFoxy</h1>
+                    <p>Created a single page application for a recycling program.</p>
+                    <h3>Features</h3>
+                    <ol>
+                        <li>Implemented Vertical Swipe with progress tracking dots using JavaScript</li>
+                        <li>Global product search using the ELK Stack.</li>
+                        <li>Search suggestions and empty search prompts using gems like Searchkick, which are build on top of Ekasticsearch.</li>
+                        <li>Integrate with ReactNative Webview to support in mobile apps.</li>
+                    </ol>
+                    <h3>Tech Stack: </h3><p>Ruby on Rails, HTML5/CSS3, JavaScript, ElasticSearch, ReactNative Webview</p>
+                </div>
+                <div class="column large-6 tab-full">
+                    <h3>Video Demo</h3>
+                    <div class="media-container">
+                        <video width="360" height="600" controls autoplay loop>
+                            <source src="images/recycle_with_foxy_demo.mp4" type="video/mp4">
+                            Your browser does not support this video! Try again with Google Chrome or Firefox.
+                        </video>
+                    </div>
+                </div>
+            </div>
+            <!-- iwms -->
+            <div class="row half-bottom modal-desc_iwms hidden">
+                <div class="column large-6 tab-full">
+                    <h1>Inventory and Warehouse Management System</h1>
+                    <p>Created a backend system for managing the inventory movement across mutliple warehouses.</p>
+                    <h3>Features</h3>
+                    <ol>
+                        <li>Design and develop a model for tracking all inventory movement using just one database table.</li>
+                        <li>Automate generation of reports </li>
+                        <li>Search suggestions and empty search prompts using gems like Searchkick, which are build on top of Ekasticsearch.</li>
+                        <li>Integrate with ReactNative Webview to support in mobile apps.</li>
+                    </ol>
+                    <h3>Tech Stack: </h3><p>Ruby on Rails, HTML5/CSS3, JavaScript, ElasticSearch, ReactNative Webview</p>
+                </div>
+                <div class="column large-6 tab-full">
+                    <h3>Dashboard Image</h3>
+                    <div class="media-container">
+                        <img src="images/inventory_mvmt_be.png"
+                            srcset="images/inventory_mvmt_be.png 1x, images/inventory_mvmt_be.png 2x" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <!-- apos -->
+            <div class="row half-bottom modal-desc_apos hidden">
+                <div class="column large-6 tab-full">
+                    <h1>Automated Purchase Order System</h1>
+                    <p>Created a fully automated backend system for tracking Inventory Stock Level and Purchase Orders.</p>
+                    <h3>Features</h3>
+                    <ol>
+                        <li>Schedule creation of Purchase Orders and report Out of Stock items to always ensure availability of up to 30 days of inventory.</li>
+                        <li>Automate generation of Stock reports.</li>
+                        <li>Autosuggest quantity of items to be ordered based on the current stock, previous month’s sale, popularity and availability from the brand/ distributor</li>
+                    </ol>
+                    <h3>Tech Stack: </h3><p>Ruby on Rails, HTML5/CSS3, JavaScript, API Integration with Third-Party Warehouses</p>
+                </div>
+                <div class="column large-6 tab-full">
+                    <h3>Dashboard Image</h3>
+                    <div class="media-container">
+                        <img src="images/po_dashboard_be.png"
+                            srcset="images/po_dashboard_be.png 1x, images/po_dashboard_be.png 2x" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Java Script
     ================================================== -->

@@ -1343,6 +1343,7 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   cursor: -webkit-zoom-in;
   cursor: -moz-zoom-in;
   cursor: zoom-in;
+  object-fit: contain;
 }
 
 .pswp--zoomed-in .pswp__img {
